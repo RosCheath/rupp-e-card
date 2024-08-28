@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUPP ID E-Card</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+
+<div class="zoom-container">
+
+    <div class="container">
+        <div class="padding">
+            <div class="IdCard">
+                <img class="IdCard" src="/img/rupp.svg" alt="image">
+                <div class="top">
+                    <div class="profile-user">
+                        <img src="http://staff-system.rupp.edu.kh/<%= data.image %>" class="card-img-top" alt="image">
+                    </div>
+                </div>
+                <div class="ename">
+                    <h4 class="department-font"><%= data.custom_place_of_work %></h4>
+                    <div class="position">
+                        <h4 class="name-font"><%= data.custom_khmer_name %></h4>
+                    </div>
+                    <h4 class="department-font"><%= data.custom_position %></h4>
+                </div>
+                <div class="edetails">
+                    <div class="inline-div">
+                        <h5 class="user-info" id="user-id">
+                            អត្តលេខ <b class="b-user-id">៖</b> <%= data.custom_rupp_id %>
+                        </h5>
+                        <h5 class="user-info" id="user-gender">
+                            ភេទ <b class="b-user-gender">៖</b> <%= data.gender %>
+                        </h5>
+                    </div>
+                    <div class="inline-div">
+                        <h5 class="user-info2" >
+                            ផុតកំណត់ប្រើ
+                        </h5>
+                        <h5 class="custom-expdate user-info2"></h5>
+                        <script>
+                            // Example date string from your data
+                            const dateStr = "<%= data.custom_expdate %>";
+                            
+                            // Convert the date string to a Date object
+                            const date = new Date(dateStr);
+                            
+                            // Extract month and year
+                            const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are 0-based
+                            const year = date.getFullYear();
+                            
+                            // Format the date to "MM/YYYY"
+                            const formattedDate = `${month} / ${year}`;
+                            
+                            // Display the formatted date in the h5 element
+                            document.querySelector('.custom-expdate').textContent = formattedDate;
+                        </script>
+                    </div>
+                </div>
+                <div class="footer">
+                <p>Technology by IT Center</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+</body>
+</html>

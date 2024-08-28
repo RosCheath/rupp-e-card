@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&family=Moul&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+:root {
+    --letter-spacing: 0px; /* Default letter-spacing */
+}
+
+
+* {
+    font-family: "Battambang", serif;
+    margin: 00px;
+    padding: 00px;
+    overflow: hidden;
+}
+.name-font {
+    font-family: "Moul", serif;
+    font-size: 14px;
+    /* margin: 2px; */
+    overflow: hidden;
+}
+
+.department-font {
+    font-family: "Battambang", system-ui;
+    font-size: 12px;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 480px) {
+    :root {
+        --letter-spacing: -1px;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    :root {
+        --letter-spacing: -1px;
+    }
+}
+
+
+body {
+    font-family: "Battambang", system-ui;
+    background-color: #dddddd;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-sizing: border-box;
+    flex-direction: row;
+}
+
+.IdCard {
+    height: 375px;
+    width: 235px;
+    position: relative;
+    border-radius: 12px;
+    background-size: 225px 375px;
+    background-repeat: no-repeat;
+}
+
+.top {
+    width: 6em;
+    height: 6em;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid rgba(2, 151, 32, 0.85);
+    animation: border-pulse 2s infinite;
+
+    .card-img-top {
+        width: 100%;
+        height: 100%;
+        display: flex; /* Make it a flex container */
+        align-items: center; /* Vertically center the content */
+        justify-content: center; /* Horizontally center the content */
+        text-align: center; /* Center align text inside the container */
+    }
+}
+
+@-webkit-keyframes border-pulse {
+    0% {
+        -webkit-box-shadow: 0 0 0 0 rgba(0, 161, 48, 0.9);
+    }
+    70% {
+        -webkit-box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+    }
+    100% {
+        -webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+    }
+}
+
+@keyframes border-pulse {
+    0% {
+        -moz-box-shadow: 0 0 0 0 rgba(14, 161, 20, 0.68);
+        box-shadow: 0 0 0 0 rgba(14, 165, 27, 0.63);
+    }
+    70% {
+        -moz-box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+        box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+    }
+    100% {
+        -moz-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+        box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+    }
+}
+.footer {
+    position: absolute;
+    top: 98%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #015531;
+    font-size: 12px;
+    width: 75%;
+    text-align: center;
+    margin-top: -4px;
+}
+.footer p {
+    font-family: "PT Sans", sans-serif;
+    font-size: 8px !important;
+    /* font-weight: bold; */
+}
+
+.ename {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #015531;
+    font-size: 12px;
+    width: 75%;
+    text-align: center;
+    margin-top: -4px;
+}
+
+.edetails {
+    position: absolute;
+    top: 275px;
+    text-transform: capitalize;
+    font-size: 11px;
+    margin-left: 12px;
+    color: #015531;
+    display: flex;
+    justify-content: space-between;
+    width: 90%; /* Ensure container takes up full width */
+    margin-top: 5px;
+}
+
+.inline-div {
+    display: flex;
+    flex-direction: column; /* Ensures the h5 elements stay stacked within each div */
+    
+}
+
+.user-info {
+    margin-bottom: 0; /* Adjust the value as needed */
+    font-size: 10px !important;
+    text-align: left; /* Align text to the left */
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflowing text */
+    text-overflow: ellipsis; /* Add ellipsis (...) for overflowed text */
+}
+
+.user-info2 {
+    margin-bottom: 0; 
+    font-size: 10px !important;
+    text-align: right; /* Align text to the right */
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflowing text */
+    text-overflow: ellipsis; /* Add ellipsis (...) for overflowed text */
+}
+    
+    #user-id .b-user-id {
+        padding-left:0px;
+    }
+
+    #user-gender .b-user-gender {
+    padding-left: 15px;
+    }
+
+
+.zoom-container {
+    transform: scale(1.45); /* Scale to 175% */
+    width: 100%; /* Ensure it takes full width */
+
+}
+
+.position {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.verify-badge {
+    width: 10px;
+    height: 10px;
+    margin-bottom: 8px;
+    margin-left: -2px;
+}
+
+.verify-badge img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
