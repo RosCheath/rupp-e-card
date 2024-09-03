@@ -5,9 +5,8 @@ const index = async function (req, res) {
 }
 
 const staff = async function (req, res, next) {
+    let mainURL = ("http://staff-system.rupp.edu.kh/api/resource/Employee/" + req.params.name).toString();
     try {
-        console.log(req.params.id);
-        let mainURL = ("http://staff-system.rupp.edu.kh/api/resource/Employee/" + req.params.id).toString();
         const response = await axios.get(mainURL, {
             headers: { Authorization: "token 758918cedd8ac69:2129ee1699a8f2a" }
         });
